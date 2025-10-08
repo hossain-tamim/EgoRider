@@ -3,9 +3,7 @@ from pytubefix import YouTube
 import cv2
 
 
-# --------------------------
 #  Download Only Video (no audio)
-# --------------------------
 def download_video_only(url, path="raw_videos"):
     os.makedirs(path, exist_ok=True)
     yt = YouTube(url)
@@ -25,9 +23,7 @@ def download_video_only(url, path="raw_videos"):
         return None
 
 
-# --------------------------
 #  Download Only Audio
-# --------------------------
 def download_audio_only(url, path="raw_audios"):
     os.makedirs(path, exist_ok=True)
     yt = YouTube(url)
@@ -43,9 +39,8 @@ def download_audio_only(url, path="raw_audios"):
         return None
 
 
-# --------------------------
 #  Extract Frames from Video
-# --------------------------
+
 def extract_frames(video_path, save_dir="raw_images", frame_interval=50, max_frames=5):
     os.makedirs(save_dir, exist_ok=True)
 
@@ -76,9 +71,8 @@ def extract_frames(video_path, save_dir="raw_images", frame_interval=50, max_fra
     print("✅ Frame extraction complete.")
 
 
-# --------------------------
 #  Main Program
-# --------------------------
+
 if __name__ == "__main__":
     url = input("Enter YouTube URL: ").strip()
 
